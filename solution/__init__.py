@@ -33,7 +33,7 @@ class Storage:
     def replace_container(self, serial_number, new_container):
         for container in self.containers:
             if container.serial_number == serial_number:
-                container = new_container
+                self.containers[self.containers.index(container)] = new_container
                 print(
                     "Container with the following serial number: "
                     + serial_number
